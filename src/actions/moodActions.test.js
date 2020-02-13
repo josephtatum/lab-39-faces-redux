@@ -1,4 +1,4 @@
-import { drinkCoffee, eatSnack, takeNap, study } from './moodActions';
+import { drinkCoffee, DRINK_COFFEE, eatSnack, EAT_SNACK, takeNap, TAKE_NAP, study, STUDY } from './moodActions';
 
 describe('moodActions', () => {
 
@@ -6,7 +6,7 @@ describe('moodActions', () => {
 
     const action = drinkCoffee();
     expect(action).toEqual({
-      type: 'DRINK_COFFEE'
+      type: DRINK_COFFEE
     });
   });
 
@@ -14,7 +14,7 @@ describe('moodActions', () => {
 
     const action = eatSnack();
     expect(action).toEqual({
-      type: 'EAT_SNACK'
+      type: EAT_SNACK
     });
   });
 
@@ -22,7 +22,7 @@ describe('moodActions', () => {
 
     const action = takeNap();
     expect(action).toEqual({
-      type: 'TAKE_NAP'
+      type: TAKE_NAP
     });
   });
 
@@ -30,7 +30,7 @@ describe('moodActions', () => {
 
     const action = study();
     expect(action).toEqual({
-      type: 'STUDY'
+      type: STUDY
     });
   });
 
