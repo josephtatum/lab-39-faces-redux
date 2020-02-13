@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
-import reducer from './reducers/moodReducer';
+import { moodReducer } from './reducers/moodReducer';
 
 export default createStore(
-  reducer,
+  moodReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
