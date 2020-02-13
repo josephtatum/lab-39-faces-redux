@@ -21,9 +21,9 @@ export const getFace = state => {
 };
 
 export const Moods = () => {
-
-  const dipatch = useDispatch();
   
+  const dipatch = useDispatch();
+
   return(
     <>
       <Controls>
