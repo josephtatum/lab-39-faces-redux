@@ -8,8 +8,7 @@ const initialState = {
 };
 
 export const moodReducer = (state = initialState, action) => {
-
-  switch(state, action.type) {
+  switch(action.type) {
     case DRINK_COFFEE:
       return { ...state, coffees: state.coffees + 1 };
     case EAT_SNACK:
@@ -20,6 +19,6 @@ export const moodReducer = (state = initialState, action) => {
       return { ...state, studies: state.studies + 1 };
     default:
       console.log(`unhandled type: ${action.type}`);
+      return state;
   }
-
 };

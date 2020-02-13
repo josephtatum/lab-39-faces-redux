@@ -2,9 +2,10 @@ import React from 'react';
 import { render } from 'react-dom';
 import App from './components/App';
 import { Provider } from 'react-redux';
-import store from './store';
+import { store } from './store';
 import './reset.css';
 
+console.log(store);
 render(
   <Provider store={store}>
     <App />
