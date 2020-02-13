@@ -32,4 +32,14 @@ describe('moodReducer', () => {
       studies: 0
     });
   });
+
+  it('handles a EAT_SNACK case', () => {
+    const action = eatSnack();
+    expect(moodReducer(initialState, action)).toEqual({
+      coffees: 0,
+      snacks: 1,
+      naps: 0,
+      studies: 0
+    });
+  });
 });
