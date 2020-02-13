@@ -1,0 +1,25 @@
+import { moodReducer } from './moodReducer';
+import { drinkCoffee, takeNap, study, eatSnack } from '../actions/moodActions';
+
+describe('moodReducer', () => {
+
+  let initialState;
+  beforeEach(() => {
+    initialState = {
+      coffees: 0,
+      snacks: 0,
+      naps: 0,
+      studies: 0
+    };
+  });
+
+  it('handles a DRINK_COFFEE case', () => {
+    const action = drinkCoffee();
+    expect(moodReducer(initialState, action)).toEqual({
+      coffees: 1,
+      snacks: 0,
+      naps: 0,
+      studies: 0
+    });
+  });
+});
